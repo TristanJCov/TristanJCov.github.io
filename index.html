@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Mechanical Engineer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e8f5e8;
+            background: linear-gradient(135deg, #0d1f1a 0%, #0a1914 50%, #0d1f1a 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            background: rgba(31, 47, 31, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #c0c0c0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-info h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #c0c0c0;
+            font-weight: 700;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: #4a6741;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #d1e7dd;
+            font-size: 1rem;
+        }
+
+        .location-icon {
+            font-size: 1.1rem;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 200px;
+        }
+
+        .contact-button {
+            background: linear-gradient(135deg, #1a3018, #0d1f1a);
+            color: #e8f5e8;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #243b22, #1a3018);
+            box-shadow: 0 6px 20px rgba(74, 103, 65, 0.3);
+            color: #e8f5e8;
+            border-color: #4a6741;
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(31, 47, 31, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(192, 192, 192, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #c0c0c0;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #4a6741, #c0c0c0);
+            border-radius: 2px;
+        }
+
+        /* Professional Summary */
+        .summary-text {
+            font-size: 1.1rem;
+            color: #d1e7dd;
+            line-height: 1.8;
+            text-align: justify;
+            max-width: 100%;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            background: rgba(13, 31, 26, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c0c0c0;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(192, 192, 192, 0.1);
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #c0c0c0, #4a6741);
+        }
+
+        .experience-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(74, 103, 65, 0.2);
+            background: rgba(13, 31, 26, 0.9);
+        }
+
+        .experience-item h3 {
+            color: #c0c0c0;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .experience-meta {
+            color: #4a6741;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: #d1e7dd;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: rgba(13, 31, 26, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid #4a6741;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(192, 192, 192, 0.1);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #4a6741, #c0c0c0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(74, 103, 65, 0.2);
+            background: rgba(13, 31, 26, 0.9);
+        }
+
+        .project-card h3 {
+            color: #c0c0c0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: #d1e7dd;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #1a3018, #0d1f1a);
+            color: #e8f5e8;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(74, 103, 65, 0.3);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-category h3 {
+            color: #c0c0c0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-item {
+            background: rgba(13, 31, 26, 0.8);
+            color: #d1e7dd;
+            padding: 12px 18px;
+            border-radius: 25px;
+            margin: 8px 0;
+            display: inline-block;
+            margin-right: 10px;
+            border: 2px solid rgba(74, 103, 65, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 103, 65, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-item:hover {
+            border-color: #4a6741;
+            color: #e8f5e8;
+            transform: translateY(-2px);
+            background: rgba(26, 48, 24, 0.9);
+        }
+
+        .skill-item:hover::before {
+            left: 100%;
+        }
+
+        /* References Section */
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .reference-card {
+            background: rgba(13, 31, 26, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid #c0c0c0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(192, 192, 192, 0.1);
+        }
+
+        .reference-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #c0c0c0, #4a6741);
+        }
+
+        .reference-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(74, 103, 65, 0.2);
+            background: rgba(13, 31, 26, 0.9);
+        }
+
+        .reference-card h3 {
+            color: #c0c0c0;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .reference-title {
+            color: #4a6741;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .reference-company {
+            color: #d1e7dd;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .reference-contact {
+            color: #d1e7dd;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .reference-contact strong {
+            color: #c0c0c0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            header {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .contact-section {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header, .section {
+                padding: 25px;
+            }
+            
+            .profile-info h1 {
+                font-size: 1.8rem;
+            }
+            
+            .projects-grid, .references-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Floating Animation Elements */
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(74, 103, 65, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 15%;
+            left: 8%;
+            animation-delay: -2s;
+        }
+
+        .shape:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            top: 70%;
+            right: 15%;
+            animation-delay: -4s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 85%;
+            left: 25%;
+            animation-delay: -1s;
+        }
+
+        .shape:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            top: 40%;
+            right: 25%;
+            animation-delay: -3s;
+            background: rgba(192, 192, 192, 0.08);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-25px) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="profile-section">
+                <img src="https://via.placeholder.com/150x150/1a3018/e8f5e8?text=Your+Photo" alt="Profile Picture" class="profile-img">
+                <div class="profile-info">
+                    <h1>Your Name</h1>
+                    <p class="job-title">Mechanical Engineer</p>
+                    <div class="location">
+                        <span class="location-icon">📍</span>
+                        <span>Adelaide, Australia</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <a href="mailto:your.email@example.com" class="contact-button">
+                    <span>📧</span> Email
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-button" target="_blank">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="tel:+61412345678" class="contact-button">
+                    <span>📱</span> Phone
+                </a>
+                <a href="#" class="contact-button" target="_blank">
+                    <span>📄</span> Resume
+                </a>
+            </div>
+        </header>
+
+        <!-- Professional Summary Section -->
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                Experienced mechanical engineer with over 8 years of expertise in product design, manufacturing processes, and system optimization. 
+                Specialized in developing innovative engineering solutions that enhance efficiency, reduce costs, and promote sustainability. 
+                Proven track record in leading cross-functional teams through complex projects from initial concept to successful production implementation. 
+                Skilled in advanced CAD design, finite element analysis, and lean manufacturing principles. Passionate about continuous improvement 
+                and leveraging cutting-edge technology to solve challenging engineering problems. Strong background in project management with 
+                experience managing multi-million dollar projects and achieving consistently high-quality deliverables within strict timelines and budget constraints.
+            </p>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="section">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Mechanical Engineer</h3>
+                <div class="experience-meta">Advanced Manufacturing Corp. | March 2021 - Present</div>
+                <p>Lead mechanical design engineer responsible for product development and manufacturing process optimization. Manage multi-disciplinary engineering teams of 8+ professionals and drive continuous improvement initiatives. Achieved 30% reduction in production costs through design optimization and process improvements. Successfully delivered 12+ major projects with combined value exceeding $5M. Mentor junior engineers and establish best practices for design standards and quality assurance.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Mechanical Design Engineer</h3>
+                <div class="experience-meta">Industrial Solutions Inc. | June 2019 - February 2021</div>
+                <p>Designed mechanical systems and components for industrial automation equipment. Collaborated with manufacturing teams to ensure design for manufacturability and cost optimization. Successfully delivered 15+ projects on schedule and within budget constraints. Implemented CAD standardization that improved design efficiency by 25%. Led cross-functional teams in problem-solving initiatives that reduced warranty claims by 40%.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Junior Mechanical Engineer</h3>
+                <div class="experience-meta">TechDyne Engineering | January 2017 - May 2019</div>
+                <p>Supported senior engineers in product design and development activities. Gained hands-on experience in CAD modeling, prototype testing, and technical documentation. Contributed to cost reduction initiatives saving company $200K annually. Developed expertise in finite element analysis and thermal modeling. Participated in design reviews and provided technical support to manufacturing and quality assurance teams.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Graduate Engineer</h3>
+                <div class="experience-meta">Engineering Consultants Ltd. | February 2016 - December 2016</div>
+                <p>Entry-level position supporting various engineering projects across multiple industries. Performed calculations, created technical drawings, and assisted in project documentation. Developed foundational skills in project management and client communication. Gained exposure to diverse engineering challenges including HVAC systems, structural analysis, and mechanical component design.</p>
+            </div>
+        </section>
+
+        <!-- Engineering Projects Section -->
+        <section class="section">
+            <h2>Engineering Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Automated Manufacturing System</h3>
+                    <p>Designed and implemented a fully automated assembly line system that increased production efficiency by 35% and reduced labor costs by $500K annually. Led cross-functional team through design, prototyping, and implementation phases over 18 months.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">SolidWorks</span>
+                        <span class="tech-tag">AutoCAD</span>
+                        <span class="tech-tag">PLC Programming</span>
+                        <span class="tech-tag">Lean Manufacturing</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Heat Exchanger Optimization</h3>
+                    <p>Redesigned industrial heat exchanger system resulting in 25% improved thermal efficiency and 20% cost reduction. Utilized advanced CFD analysis and thermodynamic modeling to optimize performance while meeting stringent safety requirements.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">ANSYS Fluent</span>
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">Thermal Analysis</span>
+                        <span class="tech-tag">CFD</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Robotic Arm Design</h3>
+                    <p>Developed 6-DOF industrial robotic arm for precision assembly tasks with accuracy requirements of ±0.1mm. Managed complete project lifecycle from requirements analysis to manufacturing support, delivering on time and 15% under budget.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Inventor</span>
+                        <span class="tech-tag">FEA Analysis</span>
+                        <span class="tech-tag">Control Systems</span>
+                        <span class="tech-tag">Robotics</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sustainable Packaging Solution</h3>
+                    <p>Led development of eco-friendly packaging system that reduced material usage by 40% while maintaining product protection standards. Innovation resulted in annual savings of $300K and improved company sustainability metrics.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Material Science</span>
+                        <span class="tech-tag">Sustainability</span>
+                        <span class="tech-tag">Cost Analysis</span>
+                        <span class="tech-tag">Testing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise Section -->
+        <section class="section">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design & CAD Software</h3>
+                    <div class="skill-item">SolidWorks (Advanced)</div>
+                    <div class="skill-item">AutoCAD (Advanced)</div>
+                    <div class="skill-item">Inventor (Intermediate)</div>
+                    <div class="skill-item">CATIA (Intermediate)</div>
+                    <div class="skill-item">Fusion 360</div>
+                    <div class="skill-item">3D Modeling</div>
+                    <div class="skill-item">Technical Drawings</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Analysis & Simulation</h3>
+                    <div class="skill-item">ANSYS (FEA/CFD)</div>
+                    <div class="skill-item">Finite Element Analysis</div>
+                    <div class="skill-item">Computational Fluid Dynamics</div>
+                    <div class="skill-item">MATLAB/Simulink</div>
+                    <div class="skill-item">Thermal Analysis</div>
+                    <div class="skill-item">Stress Analysis</div>
+                    <div class="skill-item">Modal Analysis</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Manufacturing & Processes</h3>
+                    <div class="skill-item">CNC Machining</div>
+                    <div class="skill-item">3D Printing/Additive Manufacturing</div>
+                    <div class="skill-item">Lean Manufacturing</div>
+                    <div class="skill-item">Six Sigma (Green Belt)</div>
+                    <div class="skill-item">GD&T (ASME Y14.5)</div>
+                    <div class="skill-item">Quality Control</div>
+                    <div class="skill-item">DfM (Design for Manufacturing)</div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Project Management & Leadership</h3>
+                    <div class="skill-item">Project Leadership</div>
+                    <div class="skill-item">Cross-functional Teams</div>
+                    <div class="skill-item">Cost Analysis & Budgeting</div>
+                    <div class="skill-item">Risk Assessment</div>
+                    <div class="skill-item">Technical Documentation</div>
+                    <div class="skill-item">Client Relations</div>
+                    <div class="skill-item">Mentoring & Training</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="section">
+            <h2>Professional References</h2>
+            <div class="references-grid">
+                <div class="reference-card">
+                    <h3>Dr. Sarah Mitchell</h3>
+                    <p class="reference-title">Engineering Manager</p>
+                    <p class="reference-company">Advanced Manufacturing Corp.</p>
+                    <div class="reference-contact">
+                        <p><strong>Email:</strong> s.mitchell@advancedmanufacturing.com</p>
+                        <p><strong>Phone:</strong> +61 8 8234 5678</p>
+                        <p><strong>LinkedIn:</strong> linkedin.com/in/sarahmitchell-eng</p>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Mark Thompson</h3>
+                    <p class="reference-title">Senior Project Director</p>
+                    <p class="reference-company">Industrial Solutions Inc.</p>
+                    <div class="reference-contact">
+                        <p><strong>Email:</strong> mark.thompson@industrialsolutions.com.au</p>
+                        <p><strong>Phone:</strong> +61 8 8345 6789</p>
+                        <p><strong>LinkedIn:</strong> linkedin.com/in/markthompson-proj</p>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Prof. David Chen</h3>
+                    <p class="reference-title">Professor of Mechanical Engineering</p>
+                    <p class="reference-company">University of Adelaide</p>
+                    <div class="reference-contact">
+                        <p><strong>Email:</strong> david.chen@adelaide.edu.au</p>
+                        <p><strong>Phone:</strong> +61 8 8313 4567</p>
+                        <p><strong>LinkedIn:</strong> linkedin.com/in/prof-davidchen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
