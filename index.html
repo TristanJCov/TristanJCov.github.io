@@ -14,8 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #e8f5e8;
-            background: linear-gradient(135deg, rgb(11, 24, 20) 0%, #062425 50%, #083335 100%);
+            color: #c0c0c0;
+            background: linear-gradient(135deg, rgb(11, 24, 20) 0%, #081f20 50%, #083335 100%);
             min-height: 100vh;
         }
 
@@ -71,7 +71,7 @@
 
         .job-title {
             font-size: 1.2rem;
-            color: #277b3a;
+            color: #c0c0c0;
             font-weight: 500;
             margin-bottom: 10px;
         }
@@ -81,7 +81,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            color: #d1e7dd;
+            color: #c0c0c0;
             font-size: 1rem;
         }
 
@@ -91,14 +91,14 @@
 
         .contact-section {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 12px;
             min-width: 200px;
         }
 
         .contact-button {
             background: linear-gradient(135deg, #1a3018, #0d1f1a);
-            color: #e8f5e8;
+            color: #c0c0c0;
             padding: 12px 20px;
             border-radius: 25px;
             text-decoration: none;
@@ -117,8 +117,8 @@
             transform: translateY(-2px);
             background: linear-gradient(135deg, #243b22, #1a3018);
             box-shadow: 0 6px 20px rgba(74, 103, 65, 0.3);
-            color: #e8f5e8;
-            border-color: #4a6741;
+            color: #c0c0c0;
+            border-color: #134736;
         }
 
         /* Section Styling */
@@ -153,7 +153,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: linear-gradient(135deg, #4a6741, #c0c0c0);
+            background: linear-gradient(135deg, #91ff97, #c0c0c0);
             border-radius: 2px;
         }
 
@@ -621,46 +621,38 @@ learning and practical mechanical and electrical aptitude.
             <h2>Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Design & CAD Software</h3>
-                    <div class="skill-item">SolidWorks</div>
-                    <div class="skill-item">AutoCAD</div>
-                    <div class="skill-item">Inventor</div>
-                    <div class="skill-item">Fusion 360</div>
-                    <div class="skill-item">3D Modeling</div>
-                    <div class="skill-item">Technical Drawings</div>
+                    <h3>Engineering & Technical Skills</h3>
+                    <div class="skill-item" onclick="showSkillPopup('Mechanical Systems Design', 'Motors, controllers, gearboxes, torque/RPM/gear ratio optimization')">Mechanical Systems Design</div>
+                    <div class="skill-item" onclick="showSkillPopup('Computer-Aided Design (CAD)', 'SolidWorks for 3D modeling, mechanical design, and assemblies')">Computer-Aided Design (CAD)</div>
+                    <div class="skill-item" onclick="showSkillPopup('Simulation & Analysis', 'EDEM for particle and bulk material simulations; MATLAB for system analysis, control systems, and data modeling; Excel for engineering calculations and data processing')">Simulation & Analysis</div>
+                    <div class="skill-item" onclick="showSkillPopup('Automation & Control Systems', 'Microcontroller integration, robotics control, pre-programmed automation')">Automation & Control Systems</div>
+                    <div class="skill-item" onclick="showSkillPopup('Product Development', 'Concept generation, prototyping, testing, and refinement of autonomous and combat robots')">Product Development</div>
+                    <div class="skill-item" onclick="showSkillPopup('Electrical Integration', 'Circuit design, motor drivers, and electromechanical system troubleshooting')">Electrical Integration</div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Analysis & Simulation</h3>
-                    <div class="skill-item">ANSYS (FEA/CFD)</div>
-                    <div class="skill-item">Finite Element Analysis</div>
-                    <div class="skill-item">Computational Fluid Dynamics</div>
-                    <div class="skill-item">MATLAB/Simulink</div>
-                    <div class="skill-item">Thermal Analysis</div>
-                    <div class="skill-item">Stress Analysis</div>
-                    <div class="skill-item">Modal Analysis</div>
+                    <h3>Project & Research Skills</h3>
+                    <div class="skill-item" onclick="showSkillPopup('Engineering Research', 'Technical literature review, component selection, and benchmarking for performance optimization')">Engineering Research</div>
+                    <div class="skill-item" onclick="showSkillPopup('Problem-Solving', 'Analytical approach to diagnosing performance issues and iterating designs')">Problem-Solving</div>
+                    <div class="skill-item" onclick="showSkillPopup('System Integration', 'Ensuring compatibility and seamless integration of mechanical and electronic components')">System Integration</div>
+                    <div class="skill-item" onclick="showSkillPopup('Testing & Validation', 'Developing strategies to evaluate robot/rover performance under real-world conditions')">Testing & Validation</div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Manufacturing & Processes</h3>
-                    <div class="skill-item">CNC Machining</div>
-                    <div class="skill-item">3D Printing/Additive Manufacturing</div>
-                    <div class="skill-item">Lean Manufacturing</div>
-                    <div class="skill-item">Six Sigma (Green Belt)</div>
-                    <div class="skill-item">GD&T (ASME Y14.5)</div>
-                    <div class="skill-item">Quality Control</div>
-                    <div class="skill-item">DfM (Design for Manufacturing)</div>
+                    <h3>Software Proficiency</h3>
+                    <div class="skill-item" onclick="showSkillPopup('SolidWorks', '3D mechanical design and assemblies')">SolidWorks</div>
+                    <div class="skill-item" onclick="showSkillPopup('EDEM', 'Engineering simulation of bulk material handling systems')">EDEM</div>
+                    <div class="skill-item" onclick="showSkillPopup('MATLAB', 'Numerical modeling, system analysis, automation scripting')">MATLAB</div>
+                    <div class="skill-item" onclick="showSkillPopup('Microsoft Excel', 'Engineering calculations, data visualization, and result tracking')">Microsoft Excel</div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Project Management & Leadership</h3>
-                    <div class="skill-item">Project Leadership</div>
-                    <div class="skill-item">Cross-functional Teams</div>
-                    <div class="skill-item">Cost Analysis & Budgeting</div>
-                    <div class="skill-item">Risk Assessment</div>
-                    <div class="skill-item">Technical Documentation</div>
-                    <div class="skill-item">Researching</div>
-                    <div class="skill-item">Mentoring & Training</div>
+                    <h3>Professional Skills</h3>
+                    <div class="skill-item" onclick="showSkillPopup('Team Leadership', 'Leading technical teams in rover and robot competitions')">Team Leadership</div>
+                    <div class="skill-item" onclick="showSkillPopup('Collaboration', 'Coordinating interdisciplinary work with software, electronics, and mechanical teammates')">Collaboration</div>
+                    <div class="skill-item" onclick="showSkillPopup('Technical Communication', 'Explaining complex engineering designs to peers, teams, and non-technical stakeholders')">Technical Communication</div>
+                    <div class="skill-item" onclick="showSkillPopup('Self-Directed Learning', 'Repairing and restoring mechanical/electrical systems (e.g., Radiogram project)')">Self-Directed Learning</div>
+                    <div class="skill-item" onclick="showSkillPopup('Achievement-Driven', 'Proven success in competitive engineering projects (e.g., winning Battle Bots competition)')">Achievement-Driven</div>
                 </div>
             </div>
         </section>
@@ -703,6 +695,16 @@ learning and practical mechanical and electrical aptitude.
                 </div>
             </div>
         </section>
+    </div>
+    <!-- Popup Modal -->
+    <div id="skillPopup" class="popup-overlay" onclick="closeSkillPopup()">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <div class="popup-header">
+                <h3 id="popupTitle" class="popup-title"></h3>
+                <button class="popup-close" onclick="closeSkillPopup()">&times;</button>
+            </div>
+            <p id="popupDescription" class="popup-description"></p>
+        </div>
     </div>
 </body>
 </html>
