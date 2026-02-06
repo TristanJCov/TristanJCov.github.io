@@ -28,7 +28,7 @@ const AboutPage = () => {
                 commercialisation of the GRolls machine. 
             </p>
 
-            <img src={photo1} alt='melbourne streets' className="rounded-sm object-cover hidden md:block mb-16"/>
+            <img src={photo1} alt='Lab Research' className="rounded-sm object-cover hidden md:block mb-16"/>
 
             <div className="flex flex-row justify-between mb-10">
               <div>

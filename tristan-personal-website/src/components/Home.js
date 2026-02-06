@@ -58,7 +58,7 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row justify-center md:justify-between gap-4 md:gap-8">
             <div className="mb-12" style={{ display: 'flex', justifyContent: 'center' }}>
               <LinkedInEmbed 
-                url="https://www.linkedin.com/embed/feed/update/urn:li:share:7386977853512302593?collapsed=1"
+                url="https://www.linkedin.com/embed/feed/update/urn:li:share:7425347725573107712?collapsed=1"
                 width="100%"
                 height={400} 
               />
@@ -66,7 +66,7 @@ const HomePage = () => {
 
             <div className="mb-12" style={{ display: 'flex', justifyContent: 'center' }}>
               <LinkedInEmbed 
-                url="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7370659917118103552?collapsed=1"
+                url="https://www.linkedin.com/embed/feed/update/urn:li:share:7386977853512302593?collapsed=1"
                 width="100%"
                 height={400} 
               />
